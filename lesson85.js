@@ -85,3 +85,119 @@ function round(num) {
 result = sum(sqrt(2), sqrt(3), sqrt(4));
 
 console.log(round(result));
+
+// Тонкое место return
+
+//=======Задача 85.6
+// Что выведется на экран в результате выполнения следующего кода:
+
+// function func(num) {
+// 	return num;
+	
+// 	let result = num * num;
+// 	return result;
+// }
+// alert( func(3) );
+// Объясните почему.
+
+3
+
+//=======Задача 85.7
+// Что выведет каждый из алертов в результате выполнения следующего кода:
+
+// function func(num) {
+// 	if (num <= 0) {
+// 		return Math.abs(num);
+// 	} else {
+// 		return num * num;
+// 	}
+// }
+
+// alert( func(10) );
+// alert( func(-5) );
+
+100
+5
+
+//=======Задача 85.8
+// Что выведет каждый из алертов в результате выполнения следующего кода:
+
+// function func(num) {
+// 	if (num <= 0) {
+// 		return Math.abs(num);
+// 	}
+	
+// 	return num * num;
+// }
+
+// alert( func(10) );
+// alert( func(-5) );
+
+100
+5
+
+//=======Задача 85.9
+// Что выведется на экран в результате выполнения следующего кода:
+
+// function func(num) {
+// 	let sum = 0;
+	
+// 	for (let i = 1; i <= num; i++) {
+// 		sum += i;
+// 		return sum;
+// 	}
+// }
+
+// alert( func(5) );
+// Объясните почему. Что хотел сделать автор данного кода? Исправьте ошибку автора.
+function func(num) {
+	let sum = 0;
+	
+	for (let i = 1; i <= num; i++) {
+		sum += i;
+	}
+return sum;
+}
+
+console.log( func(5) );
+
+
+// Применение return в цикле
+//=======Задача 85.10
+// Напишите функцию, которая параметром будет принимать число и делить его на 2 столько раз, пока результат не станет меньше 10. Пусть функция возвращает количество итераций, которое потребовалось для достижения результата.
+function func(n) {
+    let result = 0;
+    while (n > 10) {
+      n /= 2;
+      ++result;
+    } 
+    return result;
+  }
+  console.log(func(80));
+
+   //Результат: 3
+
+
+//=======Задача 85.11
+// Дана следующая функция:
+
+// function func(num1, num2) {
+// 	let result;	
+// 	if (num1 > 0 && num2 > 0) {
+// 		result = num1 * num2;
+// 	} else {
+// 		result = num1 - num2;		
+// 	return result;
+// }
+// alert(func(3, 4));
+// Перепишите ее в сокращенной форме согласно изученной теории.
+
+function func(num1, num2) {
+	if (num1 > 0 && num2 > 0) {
+		return  num1 * num2;
+	} else {
+		return  num1 - num2;
+	}
+}
+alert(func(3, 4));
+
